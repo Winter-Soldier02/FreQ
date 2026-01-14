@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreQ - Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="logo">FreQ</a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="page-section services-section">
+        <h1>Our Services</h1>
+        <ul class="service-list">
+            <li>📄 Upload previous year question papers in PDF or DOCX format</li>
+<li>🧠 Analyze and group similar questions based on frequency</li>
+<li>📊 View visual representation and patterns</li>
+<li>🤖 Interact with a smart chatbot that provides answers to frequently asked questions</li>
+<li>📥 Download a compiled report as a PDF</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="text-align: center; padding: 20px; margin-top: 40px; color: #666;">
+        &copy; 2025 FreQ. All rights reserved.
+    </footer>
+
+</body>
+</html>

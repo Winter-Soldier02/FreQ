@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreQ - About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="logo">FreQ</a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="page-section">
+        <h2>About Us</h2>
+
+        <p>
+            At <strong>FreQ</strong>, our mission is to simplify the process of analyzing question papers using advanced AI tools.
+        </p>
+
+        <p>
+            Our team is committed to enhance the exam preparation through intelligent question paper analysis and innovative digital solutions.        </p>
+
+        <p>
+            Our vision is to empower educators and institutions with tools that make examination preparation smarter and more efficient.
+        </p>
+
+        <p>
+            <strong>Have questions?</strong><br>
+            Email: <a href="mailto:support@freq.com" class="browse-link">krush@gmail.com</a><br>
+            Phone: +123 456 7890
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="text-align: center; padding: 20px; margin-top: 40px; color: #666;">
+        &copy; 2025 FreQ. All rights reserved.
+    </footer>
+</body>
+</html>

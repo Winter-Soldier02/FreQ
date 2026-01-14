@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreQ - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="logo">FreQ</a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="page-section">
+        <h2>Welcome to FreQ</h2>
+        <p>Your <strong>AI-powered question paper analysis assistant</strong> designed to help you prepare smarter and faster.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="text-align: center; padding: 20px; margin-top: 40px; color: #666;">
+        &copy; 2025 FreQ. All rights reserved.
+    </footer>
+</body>
+</html>

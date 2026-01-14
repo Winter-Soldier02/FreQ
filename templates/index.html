@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreQ - Question Paper Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="logo">FreQ</a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Upload Section -->
+        <section class="page-section upload-section">
+            <h2>Upload Question Papers</h2>
+            <div class="drop-area" id="drop-area">
+                <p>Drag & Drop your files or <label for="fileInput" class="browse-link">Browse</label></p>
+                <input type="file" id="fileInput" name="files" multiple hidden>
+            </div>
+            <p class="supported-formats">Supported formats: PDF, DOCX</p>
+            <div id="file-list"><p>No files uploaded</p></div>
+        </section>
+
+        <!-- Questions Section -->
+        <section class="page-section questions-container">
+            <div class="question-section red">
+                <h2>Most Frequent</h2>
+                <div id="most-frequent"></div>
+            </div>
+
+            <div class="question-section brown">
+                <h2>Medium Frequent</h2>
+                <div id="medium-frequent"></div>
+            </div>
+
+            <div class="question-section green">
+                <h2>Least Frequent</h2>
+                <div id="least-frequent"></div>
+            </div>
+
+            <button id="downloadBtn" class="download-btn" style="display: none;">Download PDF</button>
+
+            <div id="chart-container">
+                <canvas id="questionChart"></canvas>
+            </div>
+        </section>
+
+<!-- Answers Section -->
+<section class="page-section answers-section">
+    <div class="anscon" style="text-align: center; margin-bottom: 20px;">
+        <button id="get_ans" class="ans-btn">GET ANSWERS</button>
+    </div>
+
+    <div id="answers_output"></div>
+
+    <!-- Centered Download Button -->
+    <div style="text-align: center; margin-top: 10px;">
+        <button id="downloadAnswersBtn" class="download-btn" style="display: none;">Download Answers</button>
+    </div>
+</section>
+        
+
+    </div>
+
+    <!-- Error Popup Modal -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <p id="errorMessage">Error message here</p>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="text-align: center; padding: 20px; margin-top: 40px; color: #666;">
+        &copy; 2025 FreQ. All rights reserved.
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        function showError(message) {
+            document.getElementById("errorMessage").textContent = message;
+            document.getElementById("errorModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("errorModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById("errorModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
