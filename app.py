@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify, send_file, session
 import os
+from dotenv import load_dotenv
 import pdfplumber
 import docx
 import nltk
@@ -35,7 +36,9 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 bert_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
-client = OpenAI(api_key="REMOVED_API_KEY")
+load_dotenv()
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def get_ans_gpt(questions):
     answers = []

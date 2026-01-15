@@ -38,7 +38,7 @@ It's designed to help students prepare smarter by identifying commonly asked que
 
 1. Clone the repository  
 ```bash
-git clone https://github.com/Krushbiradar18/FreQ.git
+git clone https://github.com/Winter-Soldier02/FreQ
 cd FreQ
 ```
 

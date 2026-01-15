@@ -16,3 +16,4 @@ requests>=2.26.0
 beautifulsoup4>=4.9.3
 pytest>=6.2.5
 tqdm>=4.62.0
+python-dotenv
