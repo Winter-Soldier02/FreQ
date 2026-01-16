@@ -18,3 +18,8 @@ pytest>=6.2.5
 pdfplumber
 tqdm>=4.62.0
 python-dotenv
+openai
+fpdf
+sentence-transformers
+werkzeug
+PyPDF2
