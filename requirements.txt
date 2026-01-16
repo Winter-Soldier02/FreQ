@@ -17,4 +17,4 @@ beautifulsoup4>=4.9.3
 pytest>=6.2.5
 pdfplumber
 tqdm>=4.62.0
-
+python-dotenv
